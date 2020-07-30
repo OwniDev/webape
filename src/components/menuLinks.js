@@ -23,7 +23,7 @@ const MenuLinksWrapper = styled.div`
     right:0px;
   }
 
-  @media screen AND (max-width: 1000px){
+  @media screen AND (max-width: 1024px){
     *{
       z-index:0;
     }
@@ -41,13 +41,9 @@ const MenuLinksWrapper = styled.div`
     }
   }
   
-  @media screen AND (max-width: 740px){
-  .active_link::after{
+  @media screen AND (max-width: 700px){
       display:none;
-    }
-  }
-  
-  
+  }  
 `
 const MenuLinks = () => (
   <MenuLinksWrapper>

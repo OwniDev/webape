@@ -6,6 +6,7 @@ import colors from './colors/colors'
 
 import WANegNoBase from './images/WANegNoBase'
 import MenuLinks from './menuLinks'
+import MenuLinksMobile from './menuLinksMobile'
 import SocialLinks from './socialLinks'
 
 
@@ -20,7 +21,7 @@ const NavbarWrapper = styled.div`
   justify-content:center;
   align-items:space-around;
 
-  @media screen AND (max-width: 1000px){
+  @media screen AND (max-width: 1024px){
     width:100vw;
     height: 50px;
     position:fixed;
@@ -34,13 +35,34 @@ const NavbarWrapper = styled.div`
 `
 
 
-const Navbar = () => (
-  <NavbarWrapper>
-      <WANegNoBase/>
-      <MenuLinks/>
-      <SocialLinks />
-  </NavbarWrapper>
-)
+const Navbar = ()=>{
+  //define state
+  const [isMobile, setIsMobile] = React.useState(false)  
+
+  React.useEffect(() => {
+   function checkForResize(){
+      if( window.innerWidth < 730){
+        setIsMobile(true) 
+      } else {
+        setIsMobile(false)
+      }
+    }
+    window.addEventListener('resize', checkForResize)
+
+    return function cleanup(){
+      window.removeEventListener('resize', checkForResize)
+    }
+  })
+
+    return (
+      <NavbarWrapper>
+        {isMobile ? '' : <WANegNoBase/>}
+          <MenuLinks/>
+          <MenuLinksMobile/>
+          <SocialLinks />
+      </NavbarWrapper>
+    )
+}
  
 Navbar.propTypes = {
   siteTitle: PropTypes.string,

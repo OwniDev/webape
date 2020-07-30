@@ -629,7 +629,7 @@ main{
   }
 }
 
-@media screen AND (max-width: 1000px){
+@media screen AND (max-width: 1024px){
   main{
     left:0px;
   }
