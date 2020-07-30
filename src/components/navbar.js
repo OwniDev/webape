@@ -24,9 +24,6 @@ const NavbarWrapper = styled.div`
   @media screen AND (max-width: 1024px){
     width:100vw;
     height: 50px;
-    position:fixed;
-    bottom:0px;
-    left:0px;
     z-index:99;
     flex-direction:row;
     justify-content: space-around;
@@ -47,21 +44,15 @@ const Navbar = ()=>{
     }
   }
 
-  function onLoadResize() {
-    checkForResize();
-  }
-
   React.useEffect(() => {
-    onLoadResize();
     window.addEventListener('resize', checkForResize)
-
     return function cleanup(){
       window.removeEventListener('resize', checkForResize)
     }
   })
 
     return (
-      <NavbarWrapper onLoad={onLoadResize}>
+      <NavbarWrapper onLoad={checkForResize}>
         {isMobile ? '' : <WANegNoBase/>}
           <MenuLinks/>
           <MenuLinksMobile/>

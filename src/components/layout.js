@@ -18,9 +18,21 @@ const LayoutWrapper = styled.div`
   > *{
     display:inline-block;
   }
+
+  @media screen AND (max-width:1024px){
+    max-height: 100vh;
+  > *{
+    display:block;
+  }
+  }
 `;
 
 const NavBarLayoutWrapper = styled.div`
+@media screen AND (max-width:1024px){
+  position:fixed;
+  bottom:0;
+  z-index:99;
+}
 `;
 
 const Layout = ({ children }) => {
