@@ -22,6 +22,31 @@ const MenuLinksWrapper = styled.div`
     position:absolute;
     right:0px;
   }
+
+  @media screen AND (max-width: 1000px){
+    *{
+      z-index:0;
+    }
+    > * {
+      display:inline;
+      font-size:0.9rem; 
+      position:relative;
+      z-index:1;
+    }
+    .active_link::after {
+      min-width:100%;
+      z-index:-1;
+      min-height:5px;
+      bottom:-10px;
+    }
+  }
+  
+  @media screen AND (max-width: 740px){
+  .active_link::after{
+      display:none;
+    }
+  }
+  
   
 `
 const MenuLinks = () => (

@@ -39,15 +39,7 @@ const Layout = ({ children }) => {
       <NavBarLayoutWrapper>
         <Navbar siteTitle={data.site.siteMetadata.title}/>
       </NavBarLayoutWrapper>
-        <main
-        style={{
-          position:"absolute",
-          bottom:'0px',
-          right: '0px',
-          top: '0px',
-          left: '300px',
-        }}
-        >{children}</main>
+        <main>{children}</main>
       <footer 
           style={{
             position:"absolute",

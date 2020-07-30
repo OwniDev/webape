@@ -17,6 +17,11 @@ const SocialLinksWrapper = styled.div`
     .social-svg-mask:hover{
       fill: ${colors.turquoise}
     }
+    @media screen AND (max-width: 1000px){
+      display:none;
+      visibility:none;
+    }
+    
 `
 
 const SocialLinks = () => (

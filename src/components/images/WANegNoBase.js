@@ -26,7 +26,7 @@ const WANegNoBase = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img style={{minWidth:'150px'}} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default WANegNoBase

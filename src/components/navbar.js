@@ -19,17 +19,26 @@ const NavbarWrapper = styled.div`
   flex-direction:column;
   justify-content:center;
   align-items:space-around;
+
+  @media screen AND (max-width: 1000px){
+    width:100vw;
+    height: 50px;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    z-index:99;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+  }
 `
 
 
 const Navbar = () => (
   <NavbarWrapper>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <WANegNoBase />
+      <WANegNoBase/>
       <MenuLinks/>
       <SocialLinks />
-    </div>
-
   </NavbarWrapper>
 )
  

@@ -9,6 +9,10 @@ const CenteredWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index:2;
+
+  @media screen and (max-width:900px){
+    margin: 0px;
+  }
 `
 const Centered = ({children}) => (
   <CenteredWrapper>

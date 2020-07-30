@@ -615,8 +615,22 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+main{
+  position:absolute;
+  bottom:0px;
+  right: 0px;
+  top: 0px;
+  left: 300px;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+@media screen AND (max-width: 1000px){
+  main{
+    left:0px;
   }
 }
