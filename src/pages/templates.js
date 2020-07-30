@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import PageTitle from '../components/pageTitle';
 import TemplatesGallery from '../components/templatesGallery'
-import ComingSoon from '../components/ComingSoon'
+import ComingSoon from '../components/comingSoon'
 
 const VerticalAlign = styled.div`
   width:100%;
