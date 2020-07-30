@@ -39,14 +39,20 @@ const Navbar = ()=>{
   //define state
   const [isMobile, setIsMobile] = React.useState(false)  
 
-  React.useEffect(() => {
-   function checkForResize(){
-      if( window.innerWidth < 730){
-        setIsMobile(true) 
-      } else {
-        setIsMobile(false)
-      }
+  function checkForResize(){
+    if( window.innerWidth < 730){
+      setIsMobile(true) 
+    } else {
+      setIsMobile(false)
     }
+  }
+
+  function onLoadResize() {
+    checkForResize();
+  }
+
+  React.useEffect(() => {
+    onLoadResize();
     window.addEventListener('resize', checkForResize)
 
     return function cleanup(){
@@ -55,7 +61,7 @@ const Navbar = ()=>{
   })
 
     return (
-      <NavbarWrapper>
+      <NavbarWrapper onLoad={onLoadResize}>
         {isMobile ? '' : <WANegNoBase/>}
           <MenuLinks/>
           <MenuLinksMobile/>
