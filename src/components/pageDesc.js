@@ -9,6 +9,10 @@ const PageDescWrapper = styled.p`
   margin: 0 auto;
   margin-bottom:1.5rem;
   text-align:center;
+
+  @media screen AND (max-width:1024px){
+    width:80vw;
+  }
 `
 
 const PageDesc = ({children}) => (

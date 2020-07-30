@@ -11,8 +11,16 @@ const CenteredWrapper = styled.div`
   z-index:2;
 
   @media screen and (max-width: 1024px){
-    margin: 0px;
+    margin: 0px auto 50px auto;
+    padding-top:20px;
     width: 95%;
+    min-height:100vh;
+    position:static;
+    transform: translate(0%, 0%);
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
   }
 `
 const Centered = ({children}) => (

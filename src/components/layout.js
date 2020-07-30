@@ -20,7 +20,8 @@ const LayoutWrapper = styled.div`
   }
 
   @media screen AND (max-width:1024px){
-    max-height: 100vh;
+    /* height:100vh; */
+    /* position: relative; */
   > *{
     display:block;
   }
@@ -52,15 +53,7 @@ const Layout = ({ children }) => {
         <Navbar siteTitle={data.site.siteMetadata.title}/>
       </NavBarLayoutWrapper>
         <main>{children}</main>
-      <footer 
-          style={{
-            position:"absolute",
-            bottom:'0px',
-            right: '0px',
-            margin:'10px',
-            fontSize:'14px'
-          }}
-        >
+      <footer >
          Auxane Nitharum © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

@@ -8,6 +8,10 @@ const PageTitleWrapper = styled.h2`
   width:max-content;
   margin: 0 auto;
   margin-bottom:1.5rem;
+
+  @media screen AND (max-width:1024px){
+    width:80vw;
+  }
 `
 
 const PageTitle = ({title}) => (

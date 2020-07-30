@@ -21,7 +21,7 @@ import styled from 'styled-components'
   `
   const ImageWrapper = styled.div`
         width: 60vw;
-        min-width:400px;
+        min-width:300px;
         max-width:600px;
         margin: 0;
         position: absolute;

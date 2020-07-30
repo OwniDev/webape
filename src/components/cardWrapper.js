@@ -20,5 +20,15 @@ const CardWrapper = styled.div`
       margin: 0px 20px;
       width: ${props => props.elements === '2' ? 'calc(50% - 20px)' : props => props.elements === '3' ? 'calc(30% - 20px)' : 'auto'};
     }
+    @media screen AND (max-width:1024px){
+      flex-direction:column;
+      width: 100%;
+      > * {
+        width:90%;
+        margin: 10px auto;
+      }
+      height: auto;
+    }
+
 `
 export default CardWrapper;
