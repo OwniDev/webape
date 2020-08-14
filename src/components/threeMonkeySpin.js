@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
+// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
 // const Wrapper = {
 //   position:'absolute',
 //   left:'300px',
@@ -9,7 +9,9 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
 //   height:'100%'
 // }
 
+let spin;
 class MonkeyWrapper extends Component{
+
   componentDidMount(){
     const scene = new THREE.Scene();
     scene.background = new THREE.Color( 0xffffff );
@@ -53,7 +55,7 @@ class MonkeyWrapper extends Component{
     }
 
     // GLTF LOADER
-    const controls = new OrbitControls(camera, canvas);
+    // const controls = new OrbitControls(camera, canvas);
     const gltfLoader = new GLTFLoader();
     const url = '../../monkey/scene.gltf';
     let root;
@@ -66,46 +68,42 @@ class MonkeyWrapper extends Component{
     });
 
 
-
     const animate = function () {
-      requestAnimationFrame( animate );
+      spin = requestAnimationFrame( animate );
       if (resizeRendererToDisplaySize(renderer)) {
         const canvas = renderer.domElement;
         camera.aspect = canvas.clientWidth / canvas.clientHeight;
         camera.updateProjectionMatrix();
       }
-    //   //Move camera according to mouse input
-    // console.log(camera.position.x);
-
-      render();
-    };
-
-    function onDocumentMouseMove( event ) {
-      mouseX = ( event.clientX - windowHalfX ) / 1000;
-      mouseY = ( event.clientY - windowHalfY ) / 1000;
-    }
-    function tilt(event){
-      mouseX = Math.round(event.gamma * 2);
-      mouseY = Math.round(event.beta * 2);
-    }
-    
-    if(matchMedia('(pointer:fine)').matches){
-      document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-    } else {
-      document.addEventListener( 'deviceorientation', tilt, false );
-    }
-
-    const render = () => {
-
+      function onDocumentMouseMove( event ) {
+        mouseX = ( event.clientX - windowHalfX ) / 1000;
+        mouseY = ( event.clientY - windowHalfY ) / 1000;
+      }
+      // function tilt(event){
+      //   mouseX = Math.round(event.gamma * 2);
+      //   mouseY = Math.round(event.beta * 2);
+      // }
+      
+      // if(matchMedia('(pointer:fine)').matches){
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+      // } else {
+      //   document.addEventListener( 'deviceorientation', tilt, false );
+      // }
+  
       if (root){
       root.rotation.x += ( mouseY - root.rotation.x ) * .05;
       root.rotation.y += ( mouseX - root.rotation.y ) * .05;
+      // root.rotation.y += 0.1;
       }
+      console.log('This should disappear once the component unmounts');
       renderer.render( scene, camera );
 
-    }
-
+    };
     animate();
+  }
+
+  componentWillUnmount(){
+    cancelAnimationFrame(spin);
   }
   render(){
     return(
