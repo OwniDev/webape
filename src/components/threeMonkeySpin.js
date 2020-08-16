@@ -99,6 +99,8 @@ class MonkeyWrapper extends Component{
       renderer.render( scene, camera );
 
     };
+
+    
     animate();
   }
 

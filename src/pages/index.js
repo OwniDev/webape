@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 import WAOrgBase from "../components/images/WAOrgBase"
 import SEO from "../components/seo"
 
-import MonkeyWrapper from '../components/threeMonkeySpin'
+// import MonkeyWrapper from '../components/threeMonkeySpin'
+import R3FMonkey from '../components/R3FMonkey'
 import styled from 'styled-components'
 
   const IndexWrapper = styled.div`
@@ -40,7 +41,8 @@ const IndexPage = () => (
   <Layout>
     <IndexWrapper>
       <SEO title="Home" />
-      <MonkeyWrapper/>
+      {/* <MonkeyWrapper/> */}
+      <R3FMonkey />
       <ImageWrapper>
         <WAOrgBase />
       </ImageWrapper>
