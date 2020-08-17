@@ -13,7 +13,8 @@ export default function Model({ mouse }) {
 
   const { nodes, materials } = useLoader(GLTFLoader, '../../monkey/scene.gltf')
   const { size, viewport } = useThree()
-  const aspect = size.width / viewport.width
+  // const aspect = size.width / viewport.width
+  const aspect = viewport.factor;
   useFrame(state => {
     if (group.current) {
       group.current.rotation.x = lerp(group.current.rotation.x, mouse.current[1] / aspect / 50, 0.1)

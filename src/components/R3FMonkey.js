@@ -1,11 +1,20 @@
 import * as THREE from 'three'
-import React, { Suspense, useCallback, useEffect, useRef, } from 'react'
+import React, { Suspense, useCallback, useRef, } from 'react'
+
 import { Canvas } from "react-three-fiber";
 import Model from './Scene';
 
 const R3FMonkey = ()=>{
   const mouse = useRef([0, 0]);
-  const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
+  const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2 - 150, y - window.innerHeight / 2]), [])
+
+  const handleOrientation = (e) => {
+    mouse.current[0] = e.beta;
+    mouse.current[1] = e.gamma;
+    document.querySelector('body').style.background = 'red';
+  }
+  window.addEventListener('deviceorientation', handleOrientation);
+
   return (
     <Canvas gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
     camera={{ fov: 75, position: [0, 0, 70] }}
@@ -14,7 +23,8 @@ const R3FMonkey = ()=>{
       gl.toneMapping = THREE.ACESFilmicToneMapping
       gl.outputEncoding = THREE.sRGBEncoding
     }}
-    onMouseDown={onMouseMove}>
+    onMouseMove={onMouseMove}
+    >
       <ambientLight intensity={1.1} />
       <pointLight position={[100, 100, 100]} intensity={1} />
       <pointLight position={[-100, -100, -100]} intensity={1} color="green" />
