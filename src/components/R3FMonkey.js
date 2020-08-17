@@ -9,8 +9,8 @@ const R3FMonkey = ()=>{
   const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2 - 150, y - window.innerHeight / 2]), [])
 
   const handleOrientation = (e) => {
-    mouse.current[0] = e.beta;
-    mouse.current[1] = e.gamma;
+    mouse.current[1] = e.beta;
+    mouse.current[0] = e.gamma;
     document.querySelector('body').style.background = 'red';
   }
   window.addEventListener('deviceorientation', handleOrientation);
