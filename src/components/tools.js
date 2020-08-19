@@ -37,6 +37,7 @@ const getTitle = (title) => {
   return(
     allFile.mainImages.edges.map((image, index) => (
       <Img
+      className="tools"
       style={{width:'50px', height:'50px', marginRight:'20px'}}
       imgStyle={{maxWidth:'50px', width:'auto', maxHeight:'50px', height:'auto', margin:'auto'}}
       key={index}

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 /*
@@ -26,7 +26,7 @@ const WANegNoBase = () => {
     }
   `)
 
-  return <Img style={{minWidth:'150px'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Link to="/"><Img style={{minWidth:'150px'}} fluid={data.placeholderImage.childImageSharp.fluid} /></Link>
 }
 
 export default WANegNoBase

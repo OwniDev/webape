@@ -58,7 +58,7 @@ const ToolsWrapper = styled.div`
   width:100vw; 
   justify-content:space-between; 
   align-items:space-between;
-  margin:20px auto;
+  margin:10px auto;
   height:120px;
 @media screen and (max-width:1000px){
     display:none;
@@ -75,6 +75,12 @@ const Wrapper = styled.div`
       }
   }
 `
+const Outils = styled.p`
+  margin:0px;
+@media screen and (max-width:1000px){
+  display:none;
+}
+`
 const IndexPage = () => (
   <Layout>
     <IndexWrapper>
@@ -87,6 +93,9 @@ const IndexPage = () => (
 
       <Infos>
 
+        <Outils>
+          Nos outils:
+        </Outils>
         <ToolsWrapper>
           <Tools />
         </ToolsWrapper>

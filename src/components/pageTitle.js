@@ -11,6 +11,7 @@ const PageTitleWrapper = styled.h2`
 
   @media screen AND (max-width:1024px){
     width:80vw;
+    text-align:center;
   }
 `
 

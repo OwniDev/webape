@@ -18,12 +18,14 @@ const PastProjects = () => (
         <ProjectCard 
         img={<HastysTexts/>}
         link="https://hastystexts.netlify.app/"
+        title="Hasty's texts"
         description="Simulateur d'une conversation de groupe entre plusieurs personnages. Le portable appartient au personnage central, les bulles s'ajustent selon le personnage sélectionné."
         extra="Designer - Développeur"
         reverse
        />
         <ProjectCard 
         img={<Heliotrope/>}
+        title="Héliotrope"
         link="https://auxanen.github.io/Heliotrope/"
         description="Découvrez la page d'accueil d'Héliotrope. Un fleuriste proposant divers atelier et activités autour de l'art floral. Site démo, écrit sans frameworks."
         extra="Designer - Développeur"

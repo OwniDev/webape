@@ -645,3 +645,13 @@ footer{
     display:none!important;
   }
 }
+
+.tools{
+  filter: grayscale(60%);
+  transition:0.5s;
+
+}
+.tools:hover{
+  filter: grayscale(0%);
+  transition:0.5s;
+}
