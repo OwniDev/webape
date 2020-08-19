@@ -8,7 +8,7 @@ height: 45px;
 background: ${props => props.reverse ? '#ffffff' : '#00D1AE'};
 box-shadow: ${colors.boxShadow};
 border-radius: 5px;
-border: 1px solid ${props => props.reverse ? '#00D1AE' : 'white'};
+border: 1px solid #00D1AE;
 padding:10px 20px;
 text-decoration: none;
 max-width:max-content;
@@ -29,7 +29,17 @@ max-width:max-content;
 
   :hover{
     background: ${props => props.reverse ? '#00D1AE' : '#ffffff' };
+    border: 1px solid #00D1AE;
     transition: 0.5s ease-in;
+    .text{
+    color: ${props => props.reverse ? 'white' : '#00D1AE'};
+    transition: 0.5s ease-in;
+    }
+    .carret{
+      border-color: ${props => props.reverse ? 'white' : '#00D1AE'};
+    transition: 0.5s ease-in;
+
+    }
   }
 
 `

@@ -27,11 +27,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `webape-development`,
+        short_name: `webape`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#4B474C`,
+        theme_color: `#00D1AE`,
         display: `minimal-ui`,
         icon: `src/images/WebApe_favicon_32x32.png`, // This path is relative to the root of the site.
       },

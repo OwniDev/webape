@@ -7,6 +7,10 @@ import SEO from "../components/seo"
 // import MonkeyWrapper from '../components/threeMonkeySpin'
 import R3FMonkey from '../components/R3FMonkey'
 import styled from 'styled-components'
+import WAButton from '../components/button'
+import Tools from '../components/tools'
+
+import colors from '../components/colors/colors'
 
   const IndexWrapper = styled.div`
     position: absolute;
@@ -36,7 +40,41 @@ import styled from 'styled-components'
           z-index:99;
         } */
   `
-
+  const Infos = styled.div`
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  max-width: 420px;
+  width:100vw;
+  @media screen and (max-width:1000px){
+  }
+  `
+const ToolsWrapper = styled.div`
+  display:flex; 
+  flex-direction:row; 
+  flex-wrap:wrap; 
+  max-width:400px; 
+  width:100vw; 
+  justify-content:space-between; 
+  align-items:space-between;
+  margin:20px auto;
+  height:120px;
+@media screen and (max-width:1000px){
+    display:none;
+  }
+`
+const Wrapper = styled.div`
+    display:flex;
+    display-direction:row;
+    justify-content:space-between;
+    @media screen and (max-width:1000px){
+    flex-wrap:wrap;
+      > * {
+        margin:10px auto;
+      }
+  }
+`
 const IndexPage = () => (
   <Layout>
     <IndexWrapper>
@@ -46,6 +84,27 @@ const IndexPage = () => (
       <ImageWrapper>
         <WAOrgBase />
       </ImageWrapper>
+
+      <Infos>
+
+        <ToolsWrapper>
+          <Tools />
+        </ToolsWrapper>
+
+        <Wrapper>
+
+          <WAButton link="/contact" reverse="true">
+            Contact
+          </WAButton>
+
+          <WAButton link="/past-projects" >
+            Sites d'exemple
+          </WAButton>
+
+        </Wrapper>
+
+      </Infos>
+
     </IndexWrapper>
   </Layout>
 )

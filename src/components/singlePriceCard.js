@@ -32,7 +32,10 @@ const SinglePriceCard = ({title, description, price}) => (
   <SinglePriceCardWrapper>
     <h3>{title}</h3>
     <p>{description}</p>
+    <p>
+    À partir de<br/>
     <PriceStyles>{price}</PriceStyles>
+    </p>
   </SinglePriceCardWrapper>
 )
 
