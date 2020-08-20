@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { Suspense, useCallback, useRef, } from 'react'
+import React, { Suspense, useCallback, useRef, useEffect } from 'react'
 
 import { Canvas } from "react-three-fiber";
 import Model from './Scene';
@@ -12,7 +12,9 @@ const R3FMonkey = ()=>{
     mouse.current[1] = e.beta;
     mouse.current[0] = e.gamma;
   }
-  window.addEventListener('deviceorientation', handleOrientation);
+  useEffect(()=> {
+    window.addEventListener('deviceorientation', handleOrientation);
+  }, [])
 
   return (
     <Canvas gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}

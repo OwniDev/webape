@@ -22,9 +22,7 @@ const ToolsWrapper = styled.div`
 `
 const Outils = styled.p`
   margin:0px;
-@media screen and (max-width:1000px){
-  display:none;
-}
+
 `
 const AboutText = () => (
   <CardWrapper>
