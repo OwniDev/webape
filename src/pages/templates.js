@@ -20,7 +20,7 @@ const VerticalAlign = styled.div`
 const PastProjects = () => (
   <Layout>
     <SEO title="Templates gratuites" />
-    {/* <ComingSoon/> */}
+    <ComingSoon/>
     <VerticalAlign>
       <PageTitle title="Templates gratuites"/>
       <TemplatesGallery/>

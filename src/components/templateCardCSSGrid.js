@@ -7,7 +7,7 @@ import styled from 'styled-components'
 // import colors from './colors/colors'
 
 const GridContainer = styled.div`
-flex:2 0 20em;
+flex:2 0 70%;
 width: 100%;
 max-width:80vw;
 height:500px;

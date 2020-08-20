@@ -7,11 +7,11 @@ height: 45px;
 background: ${props => props.reverse ? '#ffffff' : '#00D1AE'};
 box-shadow: ${colors.boxShadow};
 border-radius: 5px;
-border: 1px solid ${props => props.reverse ? '#00D1AE' : 'white'};
+border: 1px solid #00D1AE;
 padding:10px 20px;
 text-decoration: none;
 max-width:max-content;
-transition: 0.5s ease-in;
+transition: 0.5s ease-out;
 
   .text{
     margin-right:50px;
@@ -27,11 +27,11 @@ transition: 0.5s ease-in;
     transform:rotate(-45deg);
     vertical-align: middle;
   }
-  
+
   :hover{
     background: ${props => props.reverse ? '#00D1AE' : '#ffffff' };
-    border: 1px solid ${props => props.reverse ? 'white' : '#00D1AE'};
-    transition: 0.5s ease-in;
+    border: 1px solid #00D1AE;
+    transition: 0.5s ease-out;
     .text{
     color: ${props => props.reverse ? 'white' : '#00D1AE'};
     transition: 0.5s ease-in;
@@ -40,6 +40,14 @@ transition: 0.5s ease-in;
       border-color: ${props => props.reverse ? 'white' : '#00D1AE'};
     transition: 0.5s ease-in;
 
+    }
+  }
+  @media screen and (max-width:550px){
+    .text{
+    margin-right:0px;
+    }
+    .carret{
+      display: none;
     }
   }
 `

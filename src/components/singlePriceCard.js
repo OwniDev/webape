@@ -29,12 +29,22 @@ const SinglePriceCardWrapper = styled.div`
    }
    .deets{
      display:flex;
-     flex-direction:row;
+     flex-direction:column;
+     justify-content:space-between;
+     align-items:center;
+     .text{
+       padding:0px;
+       margin:0px;
+       margin-bottom:10px;
+     }
+     @media screen and (max-width:600px){
+      flex-direction:row;
      justify-content:space-around;
      align-items:center;
      .text{
        padding:0px;
        margin:0px;
+     }
      }
    }
    

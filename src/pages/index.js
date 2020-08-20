@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import R3FMonkey from '../components/R3FMonkey'
 import styled from 'styled-components'
 import WAButton from '../components/button'
-import Tools from '../components/tools'
+// import Tools from '../components/tools'
 
 
   const IndexWrapper = styled.div`
@@ -49,20 +49,7 @@ import Tools from '../components/tools'
   @media screen and (max-width:1000px){
   }
   `
-const ToolsWrapper = styled.div`
-  display:flex; 
-  flex-direction:row; 
-  flex-wrap:wrap; 
-  max-width:400px; 
-  width:100vw; 
-  justify-content:space-between; 
-  align-items:space-between;
-  margin:10px auto;
-  height:120px;
-@media screen and (max-width:1000px){
-    display:none;
-  }
-`
+
 const Wrapper = styled.div`
     display:flex;
     display-direction:row;
@@ -74,12 +61,7 @@ const Wrapper = styled.div`
       }
   }
 `
-const Outils = styled.p`
-  margin:0px;
-@media screen and (max-width:1000px){
-  display:none;
-}
-`
+
 const IndexPage = () => (
   <Layout>
     <IndexWrapper>
@@ -91,26 +73,17 @@ const IndexPage = () => (
       </ImageWrapper>
 
       <Infos>
-
-        <Outils>
-          Nos outils:
-        </Outils>
-        <ToolsWrapper>
-          <Tools />
-        </ToolsWrapper>
-
+        <p style={{textAlign:'center'}}>
+          <strong>Bienvenue sur webape.dev !</strong> <br/>Ici, on <strong>crée et développe</strong> vos sites avec les toutes <strong>dernières technologies</strong> pour un résultat au <strong>top&nbsp;de&nbsp;la&nbsp;performance</strong> ⚡.
+        </p>
         <Wrapper>
-
-          <WAButton link="/contact" reverse="true">
-            Contact
-          </WAButton>
-
           <WAButton link="/past-projects" >
             Sites d'exemple
           </WAButton>
-
+          <WAButton link="/contact" reverse="true">
+            Contact
+          </WAButton>
         </Wrapper>
-
       </Infos>
 
     </IndexWrapper>

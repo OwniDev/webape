@@ -25,9 +25,9 @@ transition:0.5s;
 
 const PastProjects = () => (
   <Layout>
-    <SEO title="Prix" />
+    <SEO title="Tarifs" />
     <Centered>
-      <PageTitle title="Prix"/>
+      <PageTitle title="Tarifs"/>
        <PageDesc>
         Retrouvez ici les prix de bases de nos prestations. <br/>
         Le prix d'un site statique dépend du nombre de pages, <ContactLink to="/contact">contactez nous</ContactLink> pour un devis !
