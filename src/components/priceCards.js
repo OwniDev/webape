@@ -11,6 +11,7 @@ const PriceCards = () => (
       title="Site statique" 
       description="Vous recherchez une solution simple pour la création d'un site dont le contenu ne changera pas ou peu." 
       price="400€"
+      subject="Demande de devis pour site statique"
       />
   </CardContainer>
   
@@ -19,6 +20,8 @@ const PriceCards = () => (
       title="Site Wordpress React" 
       description="Vous souhaitez alimenter un site avec du nouveau contenu régulièrement. Une solution plus flexible qu'un Wordpress de base." 
       price="200€/ jour"
+      subject="Demande de devis pour site wordpress React"
+
     />
   </CardContainer>
 
@@ -27,6 +30,8 @@ const PriceCards = () => (
         title="Web App" 
         description="Vous souhaitez mettre au point un site web avec des fonctionnalités complexes." 
         price="250€/ jour"
+       subject="Demande de devis pour une web app"
+
         />
   </CardContainer>
 </CardWrapper>

@@ -29,7 +29,7 @@ const TemplateCard = (props)=>{
   
   return(
     <CardWrapper >
-      <div style={{'max-height':'700px', 'max-width':'900px'}}>
+      <div style={{maxHeight:'700px', maxWidth:'900px', width:'100vw'}}>
          <Gallery photos={photos} onClick={openLightbox} direction="row"/>
             <ModalGateway>
               {viewerIsOpen ? (

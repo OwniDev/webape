@@ -10,7 +10,6 @@ import styled from 'styled-components'
 import WAButton from '../components/button'
 import Tools from '../components/tools'
 
-import colors from '../components/colors/colors'
 
   const IndexWrapper = styled.div`
     position: absolute;

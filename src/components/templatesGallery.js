@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from '@brainhubeu/react-carousel';
-import TemplateCard from "./templateCard";
+import TemplateCard from "./templateCardCSSGrid";
 import '@brainhubeu/react-carousel/lib/style.css';
 import styled from 'styled-components'
 import colors from './colors/colors'
@@ -23,7 +23,17 @@ const StyledCarousel = styled(Carousel)`
 `
 
 const TemplatesGallery = ()=>(
-  <StyledCarousel arrows dots centered>
+  <StyledCarousel 
+  arrows 
+  dots 
+  centered
+  breakpoints={{
+    900:{
+      dots:false,
+      arrows:false,
+    },
+  }}
+  >
     <TemplateCard
     title="Behemoth" 
     description={<p>Made with Fantasy RPGs I mind. <br/>

@@ -3,6 +3,7 @@ import WAButton from './button'
 import styled from 'styled-components'
 
 const BottomRowWrapper = styled.div`
+flex:0 1 30%;
   .right, .left{
     display:inline-block;
     width:calc(50% - 20px);
@@ -21,6 +22,18 @@ const BottomRowWrapper = styled.div`
 
   h4{
     margin:10px 0px;
+  }
+  @media screen and (max-width:649px){
+    .right, .left{
+    display:block;
+    width:100%;
+    }
+    .right{
+      display:flex;
+      margin-left:0px;
+      flex-direction:row;
+      justify-content: space-between;
+    }
   }
 
 `

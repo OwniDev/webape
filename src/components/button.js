@@ -41,7 +41,14 @@ max-width:max-content;
 
     }
   }
-
+  @media screen and (max-width:550px){
+    .text{
+    margin-right:0px;
+    }
+    .carret{
+      display: none;
+    }
+  }
 `
 
 const WAButton = ({link, children, reverse}) => (
