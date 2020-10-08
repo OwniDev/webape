@@ -6,6 +6,8 @@
   "author": "Auxane Nitharum <auxane@webape.dev>",
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.16",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "babel-plugin-styled-components": "^1.10.7",
     "formik": "^2.1.5",
     "gatsby": "^2.23.10",
@@ -23,6 +25,7 @@
     "lerp": "^1.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-burger-menu": "^2.7.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-images": "^1.1.7",

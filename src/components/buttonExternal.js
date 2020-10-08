@@ -53,7 +53,7 @@ transition: 0.5s ease-out;
 `
 
 const WAExternalButton = ({link, children, reverse}) => (
-  <ButtonWrapper href={link} reverse={reverse} target="_blank">
+  <ButtonWrapper href={link} reverse={reverse} target="_blank" rel="noreferrer">
     <span className="text">{children}</span>
     <span className="carret">&nbsp;</span>
   </ButtonWrapper>

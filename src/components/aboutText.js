@@ -15,14 +15,10 @@ const ToolsWrapper = styled.div`
   justify-content:space-between; 
   align-items:space-between;
   margin:10px auto;
-  height:120px;
+  height:150px;
 @media screen and (max-width:1000px){
-    display:none;
+    width:100%;
   }
-`
-const Outils = styled.p`
-  margin:0px;
-
 `
 const AboutText = () => (
   <CardWrapper>
@@ -37,10 +33,6 @@ const AboutText = () => (
             <li>développement web front et back</li>
             <li>et des connaissances marketing</li>
           </ul>
-        <p>
-        Je construis les sites avec React et ses différents frameworks, notamment Gatsby, Nextjs et Frontity.
-        Afin de compléter les offres que je proposerai très prochainement le stack MERN à mes outils.
-      </p>
         <h3>
         Nos outils:
         </h3>
@@ -48,7 +40,7 @@ const AboutText = () => (
           <Tools />
         </ToolsWrapper>
       <p>
-        Modèle 3D : <a href="https://sabrinaooi.wixsite.com/portfolio" target="_blank">Sabrina Ooi</a>
+        Modèle 3D : <a href="https://sabrinaooi.wixsite.com/portfolio" target="_blank" rel="noreferrer">Sabrina Ooi</a>
       </p>
     </CardContainer>
   </CardWrapper>

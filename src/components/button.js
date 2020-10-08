@@ -9,7 +9,7 @@ background: ${props => props.reverse ? '#ffffff' : '#00D1AE'};
 box-shadow: ${colors.boxShadow};
 border-radius: 5px;
 border: 1px solid #00D1AE;
-padding:10px 20px;
+padding:0.5rem 1rem;
 text-decoration: none;
 max-width:max-content;
   .text{

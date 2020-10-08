@@ -52,7 +52,7 @@ import WAButton from '../components/button'
 
 const Wrapper = styled.div`
     display:flex;
-    display-direction:row;
+    flex-direction:row;
     justify-content:space-between;
     @media screen and (max-width:1000px){
     flex-wrap:wrap;
@@ -74,7 +74,7 @@ const IndexPage = () => (
 
       <Infos>
         <p style={{textAlign:'center'}}>
-          <strong>Bienvenue sur webape.dev !</strong> <br/>Ici, on <strong>crée et développe</strong> vos sites avec les toutes <strong>dernières technologies</strong> pour un résultat au <strong>top&nbsp;de&nbsp;la&nbsp;performance</strong> ⚡.
+          <strong>Bienvenue sur webape.dev !</strong> <br/>Création de site internet avec les toutes <strong>dernières technologies</strong> pour un résultat au <strong>top&nbsp;de&nbsp;la&nbsp;performance</strong> ⚡.
         </p>
         <Wrapper>
           <WAButton link="/past-projects" >

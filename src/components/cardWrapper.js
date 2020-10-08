@@ -4,7 +4,6 @@ import colors from './colors/colors'
 const CardWrapper = styled.div`
   max-width:1000px;
   width:100%;
- /* height:40%; */
   box-sizing:border-box;
   display:flex;
   flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
@@ -15,7 +14,13 @@ const CardWrapper = styled.div`
   border-radius: 10px;
 
   padding:20px 0px;
-  margin:20px auto;
+  margin:0px auto;
+  margin-top:10px;
+  p, span, li, ul{
+    font-size:0.9rem;
+    margin-bottom:0.5rem;
+
+  }
     > * {
       margin: 0px 20px;
       width: ${props => props.elements === '2' ? 'calc(50% - 20px)' : props => props.elements === '3' ? 'calc(30% - 20px)' : 'auto'};

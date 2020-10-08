@@ -34,6 +34,9 @@ const NavBarLayoutWrapper = styled.div`
   bottom:0;
   z-index:99;
 }
+@media screen AND (max-width:700px){
+  position:initial;
+}
 `;
 
 const Layout = ({ children }) => {
