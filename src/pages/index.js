@@ -17,9 +17,10 @@ const IndexWrapper = styled.div`
   top: 0px;
   bottom: 0px;
   canvas {
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: block;
+    z-index:99;
   }
 `
 const ImageWrapper = styled.div`

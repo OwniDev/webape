@@ -27,7 +27,7 @@ const R3FMonkey = () => {
   return (
     <>
       <Canvas
-        gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
+        gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
         camera={{ fov: 75, position: [0, 0, 70] }}
         onCreated={({ gl }) => {
           gl.setClearColor("white")
@@ -36,12 +36,13 @@ const R3FMonkey = () => {
         }}
         onMouseMove={onMouseMove}
       >
-        <ambientLight intensity={1.1} />
-        <pointLight position={[100, 100, 100]} intensity={1} />
-        <pointLight position={[-100, -100, -100]} intensity={1} color="green" />
         <Suspense fallback={null}>
           <Model mouse={mouse} />
         </Suspense>
+        <ambientLight color="white" intensity={1} />
+        <pointLight position={[100, 100, 100]} intensity={2} color="blue"/>
+        <pointLight position={[-100, -100, -100]} intensity={5} color="green" />
+
       </Canvas>
     </>
   )

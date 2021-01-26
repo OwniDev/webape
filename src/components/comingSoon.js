@@ -2,7 +2,6 @@ import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
 import colors from './colors/colors'
-import Centered from '../components/centered'
 
 
 const ComingSoonWrapper = styled.div`
@@ -48,7 +47,11 @@ width:2000px;
 `
 
 const BoxH2 = styled.h2`
-position:relative;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+
 z-index:99;
 padding:40px;
 background-color:white;
@@ -60,9 +63,7 @@ font-weight:lighter;
 `
 const ComingSoon = () =>(
   <ComingSoonWrapper>
-    <Centered style={{zIndex:'99'}}>
       <BoxH2 >Page en construction,<br/>ça arrive très vite :)</BoxH2>
-    </Centered>
       <Overlay />
       <BG />
   </ComingSoonWrapper>

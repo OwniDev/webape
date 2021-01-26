@@ -16,7 +16,11 @@ export default function Model({ mouse }) {
   // const aspect = size.width / viewport.width
   const aspect = viewport.factor
   useFrame(state => {
-    if (window.DeviceOrientationEvent) {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
       if (group.current) {
         group.current.rotation.x = lerp(
           group.current.rotation.x,
@@ -51,9 +55,15 @@ export default function Model({ mouse }) {
     <group ref={group} dispose={null}>
       <mesh
         material={materials.lambert3}
+        // alphaTest='0.5'
+        depthTest={false}
+        depthWrite={false}
         geometry={nodes.LowPoly_Edit4.geometry}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[1, 1, 1]}
+        customDepthMaterial={materials.lambert3}
+       // transparent
+        
       />
     </group>
   )

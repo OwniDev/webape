@@ -1,0 +1,53 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "projectuid",
+        "placeholder" : "uid"
+      }
+    },
+    "website_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 465
+        },
+        "thumbnails" : [ ],
+        "label" : "Website Image"
+      }
+    },
+    "website_name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "Website name",
+        "placeholder" : "Project site"
+      }
+    },
+    "website_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph, strong, em",
+        "label" : "Website description",
+        "placeholder" : "This is a description of the website"
+      }
+    },
+    "roles" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Roles",
+        "placeholder" : "Designer - Développeur"
+      }
+    },
+    "link_to_website" : {
+      "type" : "Link",
+      "config" : {
+        "allowTargetBlank" : true,
+        "label" : "Link to website",
+        "placeholder" : "Visiter"
+      }
+    }
+  }
+}
