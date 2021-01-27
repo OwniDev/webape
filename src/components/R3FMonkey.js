@@ -1,5 +1,6 @@
-import * as THREE from "three"
 import React, { Suspense, useCallback, useRef, useEffect } from "react"
+
+import * as THREE from "three"
 
 import { Canvas } from "react-three-fiber"
 import Model from "./Scene"
@@ -24,10 +25,11 @@ const R3FMonkey = () => {
       window.addEventListener("deviceorientation", handleOrientation)
     }
   }, [])
+  
   return (
     <>
       <Canvas
-        gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
+        gl={{ alpha: false, antialias: true, gammaOutput:true }}
         camera={{ fov: 75, position: [0, 0, 70] }}
         onCreated={({ gl }) => {
           gl.setClearColor("white")
@@ -35,14 +37,14 @@ const R3FMonkey = () => {
           gl.outputEncoding = THREE.sRGBEncoding
         }}
         onMouseMove={onMouseMove}
+        colorManagement={true}
       >
         <Suspense fallback={null}>
           <Model mouse={mouse} />
         </Suspense>
-        <ambientLight color="white" intensity={1} />
+        <ambientLight color="white" intensity={0.5} />
         <pointLight position={[100, 100, 100]} intensity={2} color="blue"/>
         <pointLight position={[-100, -100, -100]} intensity={5} color="green" />
-
       </Canvas>
     </>
   )
