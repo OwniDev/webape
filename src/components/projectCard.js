@@ -5,9 +5,9 @@ import CardWrapper from "./cardWrapper"
 import CardContainer from './cardContainer'
 
 
-const ProjectCard = ({reverse, link, description, extra, img, title}) => (
+const ProjectCard = ({reverse, link, description, extra, img, title, alt}) => (
   <CardWrapper reverse={reverse} elements="2">
-    <img src={img} alt="Project"/>
+    <img src={img} alt={alt}/>
     <CardContainer>
       <h3>{title}</h3>
       <p className="description">{description}</p>

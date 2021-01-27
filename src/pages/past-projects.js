@@ -13,7 +13,9 @@ const PastProjects = ({data}) => {
       data.allPrismicProjectCard.edges.forEach((project, index) => {
          if (index % 2 === 0){
             cards.push(<ProjectCard
+            key={project.node.id}
                img={project.node.data.website_image.url}
+               alt={project.node.data.website_image.alt}
                link={project.node.data.link_to_website.url}
                title={project.node.data.website_name.text}
                description={project.node.data.website_description.text}
@@ -22,7 +24,9 @@ const PastProjects = ({data}) => {
                />)
          } else {
             cards.push(<ProjectCard
+            key={project.node.id}
                img={project.node.data.website_image.url}
+               alt={project.node.data.website_image.alt}
                link={project.node.data.link_to_website.url}
                title={project.node.data.website_name.text}
                description={project.node.data.website_description.text}
